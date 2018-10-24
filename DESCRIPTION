@@ -1,0 +1,20 @@
+Package: ImageTools
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.0.9000
+Imports: 
+    imager,
+    magrittr
+Suggests: 
+    testthat,
+    covr,
+    spelling
+Language: en-US

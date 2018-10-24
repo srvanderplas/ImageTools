@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+[![license](https://img.shields.io/badge/license-MIT + file LICENSE-lightgrey.svg)](https://choosealicense.com/)
+[![Last-changedate](https://img.shields.io/badge/last%20change-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master) 
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build status](https://travis-ci.org/srvanderplas/ImageTools.svg?branch=master)](https://travis-ci.org/srvanderplas/ImageTools)
+[![Coverage status](https://codecov.io/gh/srvanderplas/ImageTools/branch/master/graph/badge.svg)](https://codecov.io/github/srvanderplas/ImageTools?branch=master)
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+ 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# ImageTools
+
+ImageTools is intended to be a convenience package of functions for working with images. 
+
+## Installation
+
+You can install the released version of ImageTools from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("ImageTools")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example, fig.width = 9, fig.height = 12}
+library(imager)
+library(ImageTools)
+res <- all_slices(boats, size = c(128, 128), delta = c(32, 32))
+
+par(mfrow = c(3, 4))
+plot(as.imlist(res$img)[1:12])
+```
